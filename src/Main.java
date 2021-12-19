@@ -9,7 +9,7 @@ public class Main {
             int x= sc.nextInt();
             System.out.print(x+" ");
             if (x>a){// 숫자 비교를 어떻게 해야 할까
-                System.out.print(x+" ");
+                System.out.print(x+" dd ");
             }
         }
     }
