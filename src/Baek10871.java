@@ -17,9 +17,10 @@ public class Baek10871 {
                 if (num<a)
                     if (num>b)
                         System.out.print(num+" ");
-            }else
-              System.out.println("값이 없습니다.");
-            break;
+            }else {
+                System.out.println("값이 없습니다.");
+                break;
+            }
 
             }
 
