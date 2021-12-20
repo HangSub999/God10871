@@ -9,7 +9,7 @@ public class Baek10871 {
             int num = sc.nextInt();
 
             if (num<x){
-                System.out.println(num);
+                System.out.print(num+" ");
             }
         }
 
