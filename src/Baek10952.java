@@ -2,14 +2,15 @@ import java.util.*;
 public class Baek10952 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+            int num = 0;
 
-
-        while (true){
+        while (num<5){
+            num++;
 
             int a = sc.nextInt();
             int b = sc.nextInt();
 
-            if (a==0 && b==0){
+            if (num<5){
                 break;
             }
             System.out.println(a+b);
