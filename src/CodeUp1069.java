@@ -6,16 +6,16 @@ public class CodeUp1069 {
 
         switch (num){
             case 'A':
-                System.out.println("A: best!!");
+                System.out.println("best!!");
                 break;
             case 'B':
-                System.out.println("B: good!!");
+                System.out.println("good!!");
                 break;
             case 'C':
-                System.out.println("C: run!");
+                System.out.println("run!");
                 break;
             case 'D':
-                System.out.println("D: slowly");
+                System.out.println("slowly~");
                 break;
             default:
                 System.out.println("what?");
