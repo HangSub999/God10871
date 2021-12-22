@@ -1,5 +1,5 @@
 import java.util.*;
-public class CodeUp1167 {
+public class CodeUp1167 {// 세 개의 정수가 공백으로 구분되어 입력된다.
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
 
