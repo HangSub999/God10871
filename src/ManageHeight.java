@@ -15,6 +15,6 @@ public class ManageHeight {
         };
     }
     public void printHeight(int classNo){
-        for (int i=0;i<)
+
     }
 }
