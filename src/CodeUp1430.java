@@ -26,8 +26,11 @@ public class CodeUp1430 {
                     break;
                 }
             }
-            if (bool) System.out.print(1 + " ");
-            else System.out.print(0 + " ");
+            if (bool) {
+                System.out.print(1 + " ");
+            } else {
+                System.out.print(0 + " ");
+            }
         }
     }
 }
