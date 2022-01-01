@@ -10,7 +10,6 @@ public class CodeUp1412_0101 {
         int[] ABC = new int[26];
 
         for (int i = 0; i < str.length(); i++) {
-            str.charAt(i);
             for (int j = 0; j <= ABC.length; j++) {
                 if (str.charAt(i) == 97 + j) {
                     ABC[j]++;
