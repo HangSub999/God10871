@@ -14,13 +14,11 @@ public class CodeUp1425_0104 {
             arrN[i] = sc.nextInt();
         }
         Arrays.sort(arrN);
-        int[] arrN2 = Arrays.copyOf(arrN, c);
-        for (int i = 0; i < arrN2.length; i++) {
-            System.out.print(arrN2[i] + " ");
-        }
-        System.out.println();
-        for (int i = c; i < n; i++) {
-            System.out.print(arrN[i] + " ");
+        for (int i = 1; i <= n; i++) {
+            System.out.print(arrN[i - 1] + " ");
+            if (i % c == 0) {
+                System.out.println();
+            }
         }
     }
 }
