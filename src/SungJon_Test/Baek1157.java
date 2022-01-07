@@ -1,39 +1,33 @@
 package SungJon_Test;
 
-import java.util.Arrays;
+
 import java.util.Scanner;
 
-public class Baek1157 {
+public class Baek1157 {                                       //해답 카피 이해 완료
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine(); //입력
-        String str2 = str.toUpperCase();//대문자 변환
+        String str = sc.next(); //입력
 
-        char[] abc = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'N', 'M'
-                , 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
-        int[] cont = new int[abc.length];
-        int max = 0;
+        int[] arr = new int[26]; //영문자의 개수
 
-
-        for (int i = 0; i < abc.length; i++) {
-
-                char ch = str2.charAt(i);
-
-            for (int j = 0; j < abc.length; j++) {
-                if (ch == abc[j]) {
-                    cont[j]++;
-                }
+        for (int i = 0; i < str.length(); i++) {
+            if ('A' <= str.charAt(i) && str.charAt(i) <= 'Z') { //대문자 범위
+                arr[str.charAt(i) - 'A']++;  //해당 인덱스 값 1 증가
+            } else {                       // 소문자 범위
+                arr[str.charAt(i) - 'a']++;
             }
         }
-        for (int i = 0; i < abc.length; i++) {
-            if (cont[i] > max) {
-                max = cont[i];
-                if (max == cont[i] && max >= 2) {
-                    System.out.println("?");
-                    break;
-                }
+        int max = -1;
+        char ch = '?';
+
+        for (int i = 0; i < 26; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+                ch = (char) (i + 65);  //대문자로 출력하기 위해 +65
+            } else if (arr[i] == max) {
+                ch = '?';
             }
         }
-
+        System.out.println(ch);
     }
 }
