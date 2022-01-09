@@ -16,7 +16,15 @@ public class Baek0108_2446 {
             }
             System.out.println();
         }
-
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 1; j < (n - 1) - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < 3 + 2 * i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
 
 
     }
