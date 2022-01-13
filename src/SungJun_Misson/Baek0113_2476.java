@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Baek0113_2476 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in); //답지 참고함 머리 깨짐
+        Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int[][] dice = new int[N][3];
         int[] sum = new int[N];
