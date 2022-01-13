@@ -2,15 +2,12 @@ package SungJun_Misson;
 
 import java.util.Scanner;
 
-public class Baek0113_16199 {   //이런 미친 문제 gg...답지 참고 한것임
+public class Baek0113_16199 {   //...답지 참고 한것임
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int[] n = new int[3];
         int[] m = new int[3];
 
-        int age = m[0] - n[0];
-        int s = age + 1;
-        int y = age;
         int maa = 0;
 
         for (int i = 0; i < n.length; i++) {
@@ -19,6 +16,10 @@ public class Baek0113_16199 {   //이런 미친 문제 gg...답지 참고 한것
         for (int i = 0; i < m.length; i++) {
             m[i] = sc.nextInt();
         }
+        int age = m[0] - n[0];
+        int s = age + 1;
+        int y = age;
+
         if (age != 0) {
             if (m[1] > n[1]) {
                 maa = age;
