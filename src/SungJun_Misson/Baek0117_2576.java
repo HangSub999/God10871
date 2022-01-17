@@ -11,7 +11,7 @@ public class Baek0117_2576 {
 
         int sum = 0;  //홀수 더한값 저장
         int min = 0;  //홀수 중 최소값 저장
-        int hol = 0;  //홀수 개수 저장
+        int hol = 0;  //짝수 개수 저장
 
         for (int i = 0; i < 7; i++) {   //정수 7개 num배열에 저장
             num[i] = sc.nextInt();
