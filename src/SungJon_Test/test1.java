@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class test1 {
 
-    public static final int MAX_INT = 0;
+
 
     public int 성준;
 
