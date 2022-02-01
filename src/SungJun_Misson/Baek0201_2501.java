@@ -10,7 +10,7 @@ public class Baek0201_2501 {
         int[] arr = new int[N];
 
         for (int i = 0; i < N; i++) {
-            if (N % i + 1 == 0) {
+            if (N % (i + 1) == 0) {
                 arr[i] = i + 1;
             }
         }
