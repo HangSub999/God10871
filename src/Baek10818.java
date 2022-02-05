@@ -1,21 +1,19 @@
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class Baek10818 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        int[] arr = new int[n];
+        ArrayList<Integer> arrN = new ArrayList<Integer>(n);
 
         for (int i = 0; i < n; i++) {
 
-            arr[i] = sc.nextInt();
+            arrN.add(sc.nextInt());
 
         }
-        Arrays.sort(arr);
-        System.out.println(arr[0] + " " + arr[n - 1]);
+        Collections.sort(arrN);
+        System.out.println(arrN.get(0) + " " + arrN.get(n - 1));
 
     }
 }
