@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Baek2562 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ArrayList<Integer> arrN = new ArrayList<Integer>(9);
+        ArrayList<Integer> arrN = new ArrayList<Integer>();
 
         for (int i = 0; i < 9; i++) {
             arrN.add(sc.nextInt());

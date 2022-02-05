@@ -5,7 +5,7 @@ public class Baek10818 {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        ArrayList<Integer> arrN = new ArrayList<Integer>(n);
+        ArrayList<Integer> arrN = new ArrayList<Integer>();
 
         for (int i = 0; i < n; i++) {
 
