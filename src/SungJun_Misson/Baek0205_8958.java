@@ -9,16 +9,24 @@ public class Baek0205_8958 {
         int testCas = sc.nextInt();
         String str;
         int[] count;
+        int n = 1;
 
         for (int i = 0; i < testCas; i++) {
             str = sc.next();
             count = new int[str.length()];
+
             for (int j = 0; j < str.length(); j++) {
                 char cha = str.charAt(j);
+
                 if (cha == 'O') {
-                    count[j]++;
+                    count[j] = n;
+                    n++;
+                } else if (cha == 'X') {
+                    n = 0;
                 }
             }
         }
+
+
     }
 }
