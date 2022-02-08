@@ -1,24 +1,27 @@
 package SungJun_Misson;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Baek0205_8958 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String[] arr = new String[sc.nextInt()];
 
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = sc.next();
+        int n = sc.nextInt();
+        ArrayList<String> arr = new ArrayList<String>();
+
+        for (int i = 0; i < n; i++) {
+            arr.add(sc.next());
         }
 
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.size(); i++) {
 
             int con = 0;
             int sum = 0;
 
-            for (int j = 0; j < arr[i].length(); j++) {
+            for (int j = 0; j < arr.get(i).length(); j++) {
 
-                if (arr[i].charAt(j) == 'O') {
+                if (arr.get(i).charAt(j) == 'O') {
                     con++;
                 } else {
                     con = 0;
