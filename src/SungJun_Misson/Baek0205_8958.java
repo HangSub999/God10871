@@ -1,32 +1,32 @@
 package SungJun_Misson;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Baek0205_8958 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int testCas = sc.nextInt();
-        String str;
-        int[] count;
-        int n = 1;
+        String[] arr = new String[sc.nextInt()];
 
-        for (int i = 0; i < testCas; i++) {
-            str = sc.next();
-            count = new int[str.length()];
-
-            for (int j = 0; j < str.length(); j++) {
-                char cha = str.charAt(j);
-
-                if (cha == 'O') {
-                    count[j] = n;
-                    n++;
-                } else if (cha == 'X') {
-                    n = 0;
-                }
-            }
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = sc.next();
         }
 
+        for (int i = 0; i < arr.length; i++) {
+
+            int con = 0;
+            int sum = 0;
+
+            for (int j = 0; j < arr[i].length(); j++) {
+
+                if (arr[i].charAt(j) == 'O') {
+                    con++;
+                } else {
+                    con = 0;
+                }
+                sum += con;
+            }
+            System.out.println(sum);
+        }
 
     }
 }
