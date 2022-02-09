@@ -8,7 +8,7 @@ public class Baek0205_8958 {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        ArrayList<String> arr = new ArrayList<String>();
+        ArrayList<String> arr = new ArrayList<String>(n);
 
         for (int i = 0; i < n; i++) {
             arr.add(sc.next());
