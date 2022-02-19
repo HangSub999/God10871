@@ -1,6 +1,6 @@
 package Learning;
 
-public class ArrayList {
+public class ArrayListAllCode {
     private int size = 0;
     private Object[] elementData = new Object[100];
 

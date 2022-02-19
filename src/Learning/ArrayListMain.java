@@ -3,14 +3,14 @@ package Learning;
 public class ArrayListMain {
     public static void main(String[] args) {
 
-        ArrayList numbers = new ArrayList();
+        ArrayListAllCode numbers = new ArrayListAllCode();
         numbers.addLast(10);
         numbers.addLast(20);
         numbers.addLast(30);
         numbers.addLast(40);
 
 
-        ArrayList.ListIterator li = numbers.listIterator();
+        ArrayListAllCode.ListIterator li = numbers.listIterator();
         while (li.hasNext()) {
             System.out.println(li.next());
         }
