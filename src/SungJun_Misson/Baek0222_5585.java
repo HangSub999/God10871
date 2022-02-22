@@ -23,8 +23,11 @@ public class Baek0222_5585 {
             } else if (sum >= 10) {
                 sum -= 10;
                 cont++;
+            } else if (sum >= 5) {
+                sum -= 5;
+                cont++;
             } else if (sum >= 1) {
-                sum -= 100;
+                sum -= 1;
                 cont++;
             }
         }
