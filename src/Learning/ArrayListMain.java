@@ -8,6 +8,7 @@ public class ArrayListMain {
         numbers.addLast(20);
         numbers.addLast(30);
         numbers.addLast(40);
+        numbers.add(1,20);
 
 
         ArrayListAllCode.ListIterator li = numbers.listIterator();
