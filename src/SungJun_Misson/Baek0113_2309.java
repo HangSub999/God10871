@@ -1,6 +1,4 @@
 package SungJun_Misson;
-
-
 import java.util.Arrays;
 import java.util.Scanner;
 
