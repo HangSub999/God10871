@@ -19,7 +19,7 @@ public class Baek0224_13458 {
         for (int i = 0; i < testSite; i++) {
             personnel[i] -= superVisor;
             count++;
-            while (personnel[i] > 0) {
+            for (int j = personnel[i]; j > 0; j--) {
                 personnel[i] -= deSuperVisor;
                 count++;
             }
