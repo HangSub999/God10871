@@ -7,23 +7,39 @@ public class Baek0224_13458 {
         Scanner sc = new Scanner(System.in);
 
         int testSite = sc.nextInt();
-        int[] personnel = new int[testSite];
-        long count = 0;
+        int[] candiDates = new int[testSite];
+
 
         for (int i = 0; i < testSite; i++) {
-            personnel[i] = sc.nextInt();
+            candiDates[i] = sc.nextInt();
         }
-        int superVisor = sc.nextInt();
-        int deSuperVisor = sc.nextInt();
+        int b = sc.nextInt();
+        int c = sc.nextInt();
 
+        long count = 0;
         for (int i = 0; i < testSite; i++) {
-            personnel[i] -= superVisor;
+
+            candiDates[i] -= b;
             count++;
-            for (int j = personnel[i]; j > 0; j--) {
-                personnel[i] -= deSuperVisor;
-                count++;
+
+            if (candiDates[i] <= 0) {
+                continue;
+            } else {
+                count += candiDates[i] / c;
+
+                if (candiDates[i] % c > 0) {
+                    count++;
+                }
             }
         }
+
         System.out.println(count);
     }
 }
+
+
+
+
+
+
+
