@@ -7,6 +7,10 @@ public class Baek0227_2743 {
         Scanner sc = new Scanner(System.in);
 
         String str = sc.next();
-        System.out.println(str.length());
+        for (int i = 0; i < str.length(); i++) {
+            if (i % 2 == 0) {
+                System.out.print(i + " ");
+            }
+        }
     }
 }
