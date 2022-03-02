@@ -13,39 +13,50 @@ public class Baek0302_2596 {
         char[] charC = new char[n];
         String[] strArry = new String[n];  //입력받은 값 나누기
 
-
-        for (int i = 0; i < n; i++) {
+        int ccc = 0;
+        while (ccc < n) {
             for (int j = 0; j < n * 6; j += 6) {
-                strArry[i] = str.substring(j, j + 6);
+                strArry[ccc] = str.substring(j, j + 6);
+                ccc++;
             }
         }
+
+
+        loop:
         for (int i = 0; i < strArry.length; i++) {
             for (int j = 0; j < abc.length; j++) {
                 if (strArry[i].equals(abc[j])) {
                     charC[i] = abcCha[j];
                 }
-                int comt = 0;
-                for (int k = 0; k < 6; k++) {
-                    char a = strArry[i].charAt(k);
-                    char b = abc[j].charAt(k);
+            }
+            if (charC[i] == 0) {
+                for (int j = 0; j < abc.length; j++) {
+                    int comt = 0;
+                    for (int k = 0; k < 6; k++) {
+                        char a = strArry[i].charAt(k);
+                        char b = abc[j].charAt(k);
 
-                    if (a != b && comt < 1) {
-                        charC[i] = abcCha[j];
-                        comt++;
-                    } else if (a != b && comt > 0) {
-                        System.out.println(i + 1);
-                        break;
+                        if (a != b) {
+                            comt++;
+                        } else if (a != b && comt > 0) {
+                            System.out.println(i + 1);
+                            break loop;
+                        }
+
+
                     }
-
-
+                }
+            }
+            if (i == strArry.length - 1) {
+                for (char cc : charC) {
+                    System.out.print(cc);
                 }
             }
         }
-        for (char cc : charC) {
-            System.out.print(cc);
-        }
-
     }
+
+
 }
+
 
 
