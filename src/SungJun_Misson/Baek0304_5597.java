@@ -1,6 +1,5 @@
 package SungJun_Misson;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Baek0304_5597 {
@@ -8,26 +7,27 @@ public class Baek0304_5597 {
         Scanner sc = new Scanner(System.in);
 
 
-        int[] nArry = new int[30];
-
+        int[] nArry2 = new int[30];
         int b = 0;
         int a = 0;
 
-        for (int i = 0; i < nArry.length-2; i++) {
-            nArry[i] = sc.nextInt();
-        }
+        for (int i = 0; i < 28; i++) {
+            int n = sc.nextInt();
 
-
-        for (int i = 0; i < nArry.length; i++) {
-
-        for (int j = 1; j <= nArry.length; j++) {
-            if (nArry[i] == 0 && a == 0) {
-                a = j;
-
-            } else if (nArry[i] == 0) {
-                b = j;
+            for (int j = 1; j <= nArry2.length; j++) {
+                if (n == j) {
+                    nArry2[j - 1] = j;
+                }
             }
         }
+
+
+        for (int i = 0; i < nArry2.length; i++) {
+            if (nArry2[i] == 0 && a == 0) {
+                a = i + 1;
+            } else if (nArry2[i] == 0) {
+                b = i + 1;
+            }
         }
         if (a > b) {
             System.out.println(b);
