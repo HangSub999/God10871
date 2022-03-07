@@ -15,7 +15,7 @@ public class Baek0306_3040 {
             sum += a[i];
         }
         sum = sum - 100;
-        int aa = 0;
+        int aa = 1;
         int bb = 0;
         for (int i = 0; i < 9; i++) {
             for (int j = 1; j < 9; j++) {
