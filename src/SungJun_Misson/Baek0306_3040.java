@@ -7,36 +7,29 @@ public class Baek0306_3040 {
         Scanner sc = new Scanner(System.in);
 
         int[] a = new int[9];
-        int[] b = new int[7];
 
         int sum = 0;
         for (int i = 0; i < 9; i++) {
             a[i] = sc.nextInt();
             sum += a[i];
         }
-        sum = sum - 100;
         int aa = 0;
         int bb = 0;
         for (int i = 0; i < 9; i++) {
             for (int j = i + 1; j < 9; j++) {
-                if (a[i] + a[j] == sum) {
-                    aa = a[i];
-                    bb = a[j];
+                if (a[i] + a[j] == sum - 100) {
+                    aa = i;
+                    bb = j;
                 }
             }
         }
         for (int i = 0; i < 9; i++) {
-            if (a[i] != aa || a[i] != bb) {
-                for (int j = i + j; j < 6; j++) {
-                    b[j] =
-                }
-
+            if (aa == i || bb == i) {
+                continue;
             }
+            System.out.println(a[i]);
         }
 
-        for (int cc : b) {
-            System.out.println(cc);
-        }
 
     }
 }
