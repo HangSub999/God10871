@@ -1,6 +1,5 @@
 package SungJun_Misson;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Baek0312_1159 {
@@ -23,8 +22,19 @@ public class Baek0312_1159 {
             }
 
         }
+        int cont = 0;
         for (int i = 0; i < 26; i++) {
             char a = 'a';
+            for (int j = 0; j < 26; j++) {
+                if (abc[j] < 5) {
+                    cont++;
+                }
+            }
+            if (cont == 26) {
+                System.out.println("PREDAJA");
+                break;
+            }
+
             if (abc[i] > 4) {
                 a += i;
                 System.out.print(a);
