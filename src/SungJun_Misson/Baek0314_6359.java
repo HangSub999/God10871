@@ -8,6 +8,7 @@ public class Baek0314_6359 {
 
         int t = sc.nextInt();
         int n = 0;
+        int n2 = 0;
 
     }
 }
