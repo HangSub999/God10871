@@ -5,7 +5,8 @@ import java.util.Scanner;
 public class Baek0317_11365 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
+        //테스트
+        int n = 0;
         while (true) {
             String str = sc.nextLine();
             if (str.equals("END")) {
