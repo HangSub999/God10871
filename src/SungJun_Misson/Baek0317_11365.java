@@ -17,6 +17,7 @@ public class Baek0317_11365 {
                 System.out.print(cha);
             }
             System.out.println();
+
         }
     }
 }
