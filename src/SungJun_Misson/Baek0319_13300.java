@@ -11,7 +11,7 @@ public class Baek0319_13300 {
         int[] totS = new int[6];
         int[] totM = new int[6];
         int romS = 0;
-        int romm = 0;
+        int romM = 0;
         for (int i = 0; i < number; i++) {
             int ss = sc.nextInt();
             int n = sc.nextInt();
@@ -24,12 +24,24 @@ public class Baek0319_13300 {
         for (int i = 0; i < totS.length; i++) {
             if (totS[i] == 1) {
                 romS++;
-            } else {
-                for (int j = room; j >= 0; j--) {
-
-                }
+            } else if (totS[i] == room) {
+                romS++;
+            } else if (totS[i] > room) {
+                romS = romS + (room / totS[i]);
+                romS = romS + (room % totS[i]);
             }
         }
+        for (int i = 0; i < totM.length; i++) {
+            if (totM[i] == 1) {
+                romM++;
+            } else if (totM[i] == room) {
+                romM++;
+            } else if (totM[i] > room) {
+                romM = romM + (room / totM[i]);
+                romM = romM + (room % totM[i]);
+            }
+        }
+        System.out.println(romM + romS);
 
     }
 }
