@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Baek0323_2744 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        //테스트 abbb
         String str = sc.next();
         char[] strArry = new char[str.length()];
 
