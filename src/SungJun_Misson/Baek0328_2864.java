@@ -6,26 +6,43 @@ public class Baek0328_2864 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String str = sc.next();
-        String str2 = sc.next();
-        char[] chaS = new char[str.length()];
-        char[] cha2S = new char[str2.length()];
+        String strA = sc.next();
+        String strB = sc.next();
 
-        int intS = 0;
-        for (int i = 0; i < str.length(); i++) {
-            chaS[i] = str.charAt(i);
-            if (chaS[i] == '6') {
-                chaS[i] = '5';
+        String minA = "";
+        String maxA = "";
+
+        for (int i = 0; i < strA.length(); i++) {
+            if (strA.charAt(i) == '6') {
+                minA += "5";
+            } else {
+                minA += strA.charAt(i);
             }
-            intS = Character.getNumericValue(chaS[i]);
 
-        }
-        for (int i = 0; i < str2.length(); i++) {
-            cha2S[i] = str2.charAt(i);
-            if (cha2S[i] == '6') {
-                cha2S[i] = '5';
+            if (strA.charAt(i) == '5') {
+                maxA += "6";
+            } else {
+                maxA += strA.charAt(i);
             }
         }
 
+        String minB = "";
+        String maxB = "";
+        for (int i = 0; i < strB.length(); i++) {
+            if (strB.charAt(i) == '6') {
+                minB += "5";
+            } else {
+                minB += strB.charAt(i);
+            }
+
+            if (strB.charAt(i) == '5') {
+                maxB += "6";
+            } else {
+                maxB += strB.charAt(i);
+            }
+        }
+        int min = Integer.parseInt(minA) + Integer.parseInt(minB);
+        int max = Integer.parseInt(maxA) + Integer.parseInt(maxB);
+        System.out.println(min + " " + max);
     }
 }
