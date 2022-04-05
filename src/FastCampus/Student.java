@@ -2,19 +2,20 @@ package FastCampus;
 
 public class Student {
 
-    public int studentID;
+    public int studentNumber;
     public String studentName;
-    public String address;
+    public int grade;
 
-    public void showStudentInfo() {
-        System.out.println(studentID + "학번 학생의 이름은 " + studentName + "이고, 주소는" + address + "입니다.");
+    public Student() {
     }
 
-    public String getStudentName() {
-        return studentName;
+    public Student(int studentNumber, String studentName, int grade) {
+        this.studentName = studentName;
+        this.grade = grade;
+        this.studentNumber = studentNumber;
     }
 
-    public void setStudentName(String name) {
-        studentName = name;
+    public String showStudentInfo() {
+        return studentName + "학생의 학번은" + studentNumber + "이고" + grade + "학년 입니다.";
     }
 }
