@@ -3,12 +3,9 @@ package FastCampus;
 public class StudentTest {
     public static void main(String[] args) {
 
-        Student studentLee = new Student();
+        Student studentLee = new Student(345, "Lee", 5);
 
-        studentLee.studentID = 12345;
-        studentLee.setStudentName("Lee");
-        studentLee.address = "인천 미추홀구";
 
-        studentLee.showStudentInfo();
+        System.out.println(studentLee.showStudentInfo());
     }
 }
