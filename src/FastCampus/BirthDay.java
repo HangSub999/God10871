@@ -7,6 +7,7 @@ public class BirthDay {
 
     private boolean isValid;
 
+
     public int gteDay() {
         return day;
     }
