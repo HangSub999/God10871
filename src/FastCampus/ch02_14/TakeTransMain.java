@@ -1,4 +1,4 @@
-package FastCampus.ch14;
+package FastCampus.ch02_14;
 
 public class TakeTransMain {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package FastCampus.ch14;
+package FastCampus.ch02_14;
 
 public class Student {
 
