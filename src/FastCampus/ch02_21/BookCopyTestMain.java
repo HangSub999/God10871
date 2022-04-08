@@ -11,8 +11,17 @@ public class BookCopyTestMain {
         library[3] = new Book("시리즈4", "김둘리");
         library[4] = new Book("시리즈5", "김둘리");
 
-        System.arraycopy(library, 0, copyLibrary, 0, 5);
-        // 객체 배열 복사를 한 후에 library 를 변경하면 복사한 copyLibrary 도 같이 변경 된다.
+        copyLibrary[0] = new Book();
+        copyLibrary[1] = new Book();
+        copyLibrary[2] = new Book();
+        copyLibrary[3] = new Book();
+        copyLibrary[4] = new Book();
+
+        for (int i = 0; i < library.length; i++) {
+            copyLibrary[i].setTitle(library[i].getTitle());
+            copyLibrary[i].setAuthor(library[i].getAuthor());
+        }
+
         for (Book book : library) {
             book.showInfo();
         }
