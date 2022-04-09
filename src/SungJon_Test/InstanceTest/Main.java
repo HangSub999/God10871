@@ -1,16 +1,13 @@
 package SungJon_Test.InstanceTest;
 
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
+        int n = Input.학생수입력하기();
         Stusent[] arr = new Stusent[n];
 
         for (int i = 0; i < n; i++) {
-            String name = scanner.next();
-            arr[i] = new Stusent(name, new Subject(scanner.next(), scanner.nextInt()));
+            String name = Input.학생이름입력하기();
+            arr[i] = new Stusent(name, new Subject(Input.과목이름을입력해주세요(), Input.학생점수를입력해주세요()));
         }
 
         for (Stusent stusent : arr) {
