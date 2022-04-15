@@ -22,6 +22,7 @@ public class Stack_Queue_Test {
 
         while (!st.empty()) {
             System.out.println(st.pop());
+
         }
 
         System.out.println("Queue---------");
