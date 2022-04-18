@@ -11,10 +11,12 @@ public class Q0417_5598 {
 
         for (int i = 0; i < str.length(); i++) {
             char[] cha = str.toCharArray();
-            if (cha[i] >= 'D' || cha[i] <= 'Z') {
-                System.out.print((char) (cha[i] - 3));
+            if (cha[i] >= 'D' && cha[i] <= 'Z') {
+                cha[i] -= 3;
+                System.out.print(cha[i]);
             } else {
-                System.out.print((char) (cha[i] + 23));
+                cha[i] += 23;
+                System.out.print(cha[i]);
             }
 
         }
