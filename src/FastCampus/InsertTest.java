@@ -1,6 +1,6 @@
 package FastCampus;
 
-import org.h2.Driver;
+/*import org.h2.Driver;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -49,3 +49,4 @@ public class InsertTest {
 
     }
 }
+*/

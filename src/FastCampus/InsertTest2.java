@@ -1,5 +1,5 @@
 package FastCampus;
-
+/*
 import org.h2.Driver;
 
 import java.sql.DriverManager;
@@ -12,3 +12,4 @@ public class InsertTest2 {
 
     }
 }
+*/
