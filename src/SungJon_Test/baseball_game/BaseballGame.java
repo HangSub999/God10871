@@ -8,11 +8,13 @@ public class BaseballGame {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+
         List<Integer> userList = new ArrayList<>();
         List<Integer> comList = new ArrayList<>();
 
         boolean randomOnOf = true;
         boolean onOf = true;
+
         while (onOf) {
 
             if (randomOnOf) {
@@ -27,21 +29,13 @@ public class BaseballGame {
                 }
             }
 
-            System.out.println(comList.toString()); //  랜덤숫자 정답 공개
+            System.out.println(comList); //  랜덤숫자 정답 공개
             System.out.print("숫자를 입력해주세요 : ");
             int n = sc.nextInt();
             userList.add(n / 100);
             n = n % 100;
             userList.add(n / 10);
-            userList.add(n = n % 10);
-
-            int ballCount = 0;
-            for (Integer integer : userList) {
-                if (comList.contains(integer)) {
-                    ballCount++;
-                }
-            }
-
+            userList.add(n % 10);
 
             int strikeCount = 0;
             for (int i = 0; i < comList.size(); i++) {
@@ -49,6 +43,16 @@ public class BaseballGame {
                     strikeCount++;
                 }
             }
+
+            int ballCount = 0;
+            for (Integer integer : userList) {
+                for (Integer value : comList) {
+                    if (integer.equals(value)) {
+                        ballCount++;
+                    }
+                }
+            }
+            ballCount -= strikeCount;
 
             if (strikeCount == 3) {
                 System.out.println("3 스트라이크");
@@ -58,17 +62,24 @@ public class BaseballGame {
                 if (newGame == 2) {
                     onOf = false;
                 } else {
-                    comList.clear();      // 재 시작시 랜덤숫자 초기화
+                    comList.clear();
+                    userList.clear();
+                    randomOnOf = true; // 재 시작시 랜덤숫자 초기화
                 }
-            } else if (ballCount == 3) {
-                System.out.println("포볼");
+            } else {
                 randomOnOf = false;
-            } else if (strikeCount < 3 && ballCount < 0) {
-                System.out.printf("%d 스트라이크 %d볼%n", strikeCount, ballCount);
-                randomOnOf = false;
-            } else if (strikeCount < 3 && ballCount == 0)
+                userList.clear();
+                if (ballCount == 0 && strikeCount == 0) {
+                    System.out.println("포볼");
+                } else if (strikeCount < 3 && ballCount == 0) {
+                    System.out.println(strikeCount + " 스트라이크");
+                } else if (ballCount <= 3 && strikeCount == 0) {
+                    System.out.println(ballCount + "볼");
+                } else {
+                    System.out.printf("%d 스트라이크 %d볼%n", strikeCount, ballCount);
+                }
 
+            }
         }
-
     }
 }
