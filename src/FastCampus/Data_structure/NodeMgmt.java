@@ -1,5 +1,15 @@
 package FastCampus.Data_structure;
 
+class Node {
+
+    public int value;
+    public Node left;
+    public Node right;
+
+    public Node(int data) {
+    }
+}
+
 public class NodeMgmt {
 
     Node head = null;
@@ -106,8 +116,12 @@ public class NodeMgmt {
         if (currNode.left == null && currNode.right == null) {
             if (value < currParentNode.value) {
                 /* 한번 고민해서 작성해보세요 */
+                currNode.left = null;
+                currNode = null;
             } else {
                 /* 한번 고민해서 작성해보세요 */
+                currNode.right = null;
+                currNode = null;
             }
             return true;
         }
