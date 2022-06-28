@@ -4,7 +4,7 @@ public class Lv1_07 {
     public static void main(String[] args) {
         System.out.println(solution(626331));
     }
-
+//콜라츠 추측
    static public int solution(int num) {
         long k = num;
         for(int i = 0; i < 500; i++){
