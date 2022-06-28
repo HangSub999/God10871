@@ -1,7 +1,7 @@
 package Programmers;
 
 
-public class Solution {
+public class Solutionss {
     public static void main(String[] args) {
         System.out.println(Solutions.solution("try hello world"));
 
