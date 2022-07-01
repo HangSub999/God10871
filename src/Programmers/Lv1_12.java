@@ -3,6 +3,7 @@ package Programmers;
 public class Lv1_12 {
     public static void main(String[] args) {
 
+        System.out.println();
     }
 
     public int[] solution(long n) {
