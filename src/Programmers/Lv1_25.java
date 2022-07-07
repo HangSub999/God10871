@@ -7,7 +7,7 @@ public class Lv1_25 {
         int[] i = {1, 1, 3, 3, 0, 1, 1};
         System.out.println(Arrays.toString(solution(i)));
     }
-
+//같은 숫자는 싫어
     static public int[] solution(int[] arr) {
         List<Integer> list = new ArrayList<>();
         int tmp = -1;
